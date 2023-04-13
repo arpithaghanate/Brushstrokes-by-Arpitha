@@ -1,0 +1,1125 @@
+ 
+ @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+ 
+  @keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+ /*images*/ 
+
+ .increaser img {
+    min-width: 25%;
+ }
+ .reduce img {
+    max-width: 50%;
+ }
+
+ /*variables*/
+
+ :root{
+    --primary: #7F2964;
+    --secondary:#d4a373;
+    --tertiary:#FFEB14;
+ }
+
+ /*reset*/ 
+
+ body, p, a, li, ul {
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-family: "Rubik";
+ }
+
+ h1, h2, h3 {
+    font-family: "Orbitron";
+    color:#606c38;
+    
+ }
+ 
+ li {
+    list-style-type:none;
+ }
+ 
+
+ /*base style*/
+
+ body{
+    background: var(--secondary);
+    overflow-x: hidden;
+    color: #FFF;
+ }
+
+ .button{
+    background: none;
+    border: 2px solid #606c38;
+    border-radius: 20px;
+    padding: 6px 12px;
+    color:#606c38;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    display: inline-block;
+ }
+
+ .button:hover{
+    color: #081c15;
+    background-color:#fefae0
+ }
+
+
+ @keyframes scale-in-center{
+    0%{transform:scale(0.7);
+        opacity:1;}
+
+    100%{transform:scale(1);
+        opacity:1;}}
+
+
+.skipcontent{
+    left: 50%;
+    position: absolute;
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+    color: white;
+}
+
+.skipcontent:focus{
+    transform: translateY(0%);
+}
+
+.nav{
+    border-bottom: 1px solid darkgrey;
+}
+
+.nav-toggle {
+    position: absolute;
+    cursor:pointer;
+    margin:1rem 1rem;
+    padding-top: 0.8em;
+    padding-bottom: 1em;
+    padding-right: 2rem;
+    right:0;
+}
+
+label[for="nav-checkbox"]{
+    visibility: collapse;
+}
+label[for="nav-checkbox"] i{
+    visibility: visible;
+}
+
+.fa-bars{
+    color: var(--tertiary);
+}
+
+/* .fa-robot {
+    color: var(--tertiary);
+    transform-origin: 50% 50%;
+    animation: scale-in-center 1.5s linear alternate infinite;
+} */
+
+.logoClass{
+    
+    animation: scale-in-center 1.5s linear alternate infinite;
+}
+
+.nav-toggle .fa-x{
+    display: none;
+}
+
+.nav-checkbox {
+    display: none;
+}
+
+.nav-menu {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
+}
+
+.nav-menu li {
+    list-style: none;
+    display: none;
+}
+
+.nav-menu li:first-child{
+    margin-right: auto;
+    display: block;
+    padding-top: 1.4em;
+    padding-bottom: 0.5em;
+}
+
+
+.nav-menu li a{
+    text-decoration: none;
+    color: #fefae0;
+    font-size: 1.2rem;
+    font-family: "Orbitron";
+}
+
+.nav-menu li a:hover{
+    color: #606c38;
+}
+
+.nav-menu li a:active{
+    text-decoration: underline;
+    color: #c3cea1;
+}
+
+
+.nav-checkbox:checked ~ ul.nav-menu li{
+    display: block;
+}
+
+.nav-checkbox:checked ~ label.nav-toggle .fa-x {
+    display: block;
+    color: var(--tertiary);
+
+}
+
+.nav-checkbox:checked ~ label.nav-toggle .fa-bars {
+    display: none;
+}
+
+.current {
+   font-weight: 800;
+   font-size: 1.2em;
+   border-bottom: 2px solid #FFF;
+}
+
+
+/*INDEX*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+}
+
+.night{
+    background-image: url("../assets/painting_bg.jpg");
+}
+
+#welcome{
+    padding: 0 20px 20px 20px;
+}
+
+
+.welcome-text{
+    grid-column: 1/5;
+}
+
+#invent-text{
+   font-size: 1.6em;
+}
+
+.welcome-text h1 {
+    font-size: 2em;
+    padding: 1.4em .4em;
+}
+
+.welcome-text p {
+    font-size: 0.9em;
+    text-align: left;
+    padding-bottom: 1.5em;
+}
+
+
+.welcome-img {
+    grid-column: 5/8;
+}
+
+.welcome-img img {
+    padding-top: 2em;
+    width: 150%;
+}
+
+#invent-img {
+    grid-column: 6/8;
+}
+
+.welcome-text a{
+    margin: 10px 0;
+}
+
+.information{
+    background-color: #151e3b;
+}
+
+.information h2{
+    margin-bottom: 0;
+    padding-top: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.quote {
+    padding: 20px;
+    background-color: var(--tertiary);
+    color: #151e3b;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 12px 12px 2px 1px rgb(255, 234, 0);
+}
+
+.quote h2 {
+    overflow: hidden;
+    width: 0;
+    border-right: .15em solid black;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 5px 5px #cfdc1c;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    animation: typing 5s steps(30, end) forwards infinite;
+    padding-bottom: 30px;
+}
+
+.containerquote{
+    display: inline-block;
+
+}
+
+
+.associates{
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.177) ;
+}
+
+.associates h3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 2em;
+}
+
+.associates ul{
+    margin: 20px 0;
+}
+
+.associates li{
+    padding: 10px;
+    grid-column: span 8;
+    text-align: center;
+    align-items: center;
+}
+
+.associates li h4 {
+    padding-bottom: 20px;
+    grid-column: 2/4;
+    font-family: "Orbitron";
+    align-items: center;
+
+}
+
+
+.associates img {
+    height: 400px;
+    width:310px;
+    border: 10px solid #606C38;
+    border-radius: 15%;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.aboutContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.aboutText{
+    margin-left: 40px;
+    margin-right: 50px;
+    line-height: 1.5;
+    color:#081c15;  
+    font-size:x-large;
+}
+
+#about{
+    padding: 0 20px 20px 20px;
+    background-image: url("../assets/spacebg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-img {
+    grid-column: 1/3;
+}
+
+.about-img img {
+    padding-top: 2em;
+    width: 190%;
+}
+
+.selfImg{
+    width: 450px;
+    height: 600px;
+}
+
+.about-text{
+    grid-column: 4/9;
+}
+
+.about-text h1 {
+    font-size: 1.6em;
+    padding: 1.4em .4em;
+    text-align: right;
+}
+
+.about-text p {
+    font-size: 0.9em;
+    text-align: center;
+    padding-bottom: 1.5em;
+    padding-right:0;
+}
+
+#skilled{
+    background: black;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 30px 20px;
+}
+
+#skilled h2{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.skills div{
+    grid-column: 1/9;
+    margin: 20px 0;
+    display: flex;
+}
+
+.skills img{
+    margin: 0 20px;
+    max-width: 70%;
+    align-self: center;
+}
+
+.skills h3{
+    font-size: 0.85em;
+    padding-bottom: 0.5em;
+}
+
+.skills p{
+    font-size: 0.85em;
+}
+
+#content {
+    padding: 0 10%;
+    height: 20vh;
+  }
+  
+  #content h1 {
+    text-align:center;
+    padding-bottom:1rem;
+  }
+
+.container{
+    box-sizing: border-box;
+    color: white;
+    line-height: 1.6;
+    font-family: "Rubik";
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.brand{
+    text-align: center;
+   font-size: 2em;
+}
+ 
+.wrapper{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.wrapper > * {
+    padding: 1em;
+}
+
+.company-info{
+    background: var(--tertiary);
+    color: black;
+}
+
+.company-info h2, .company-info ul{
+    text-align: center;
+    margin: 0 0 1rem 0 ;
+    font-size: 1.5em;
+    padding: 0;
+}
+
+.company-info ul li{
+    line-height: 2.4em;
+    font-size: 0.8em;
+}
+
+.contact{
+    background: url(/assets/nightbg.jpg);
+}
+
+.contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.contact form label{
+    display: block;
+}
+
+.contact form p{
+    margin: 0;
+}
+
+.contact form .full{
+    grid-column: 1/3;
+}
+
+.contact form textarea, .contact form button{
+    width: 100%;
+}
+
+.contact form button{
+    padding:1em;
+    background: transparent;
+    color: wheat;
+    border: 2px solid var(--tertiary);
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.contact form button:hover, .contact form button:focus{
+    background: #FFEB14;
+    color: black;
+}
+
+.fontchange{
+    font-family: "Rubik";
+}
+
+.leading2{
+    display: none;
+    color:#151e3b;
+}
+
+
+.size{
+    line-height: 1.4em;
+    letter-spacing: 3px;
+}
+
+ .fontchange .tes{
+    font-size: 0.7em;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 60px;
+}
+
+.btndesign{
+    background-color: var(--tertiary);
+    color: black;
+    border-radius: 60px;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em;
+    font-family: "Orbitron";
+    margin-bottom: 60px;
+}
+
+
+#expedition{
+    padding: 0 20px 20px 20px;
+    background-image: url("../assets/p/q.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.exp-img {
+    grid-column: 1/3;
+}
+
+.exp-img img {
+    padding-top: 2em;
+    width: 190%;
+}
+
+.quotation{
+    border: 1px solid black;
+    height: 100vh;
+    display: flex;
+}
+
+.quotes{
+    width: 800px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #d4a373;
+    color: white;
+    border: 10px solid rgb(28, 86, 168);
+}
+
+.quotes h2{
+    font-size: 2rem;
+}
+
+.quotes p{
+    font-size: 1.2rem;
+}
+
+
+.buttons{
+    text-align: center;
+}
+
+
+.exp-text{
+    grid-column: 4/9;
+}
+
+.exp-text h1 {
+    /* display: flex; */
+    font-size:20px;
+    padding: 1.4em .4em;
+    text-align: left;
+}
+
+.exp-text p {
+    font-size: 0.9em;
+    text-align: left;
+    padding-bottom: 1.5em;
+    padding-right:0;
+}
+
+.imageCard{
+    position: relative;
+  display: inline-block;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem 4rem;
+}
+
+.imageCard:last-child{
+    /* margin:0rem 4rem;
+    padding-bottom: 2rem; */
+    position: relative;
+  display: inline-block;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem 4rem;
+}
+
+.imageCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.6);
+    display: block;
+  width: 100%;
+  height: auto;
+}
+.imageCard video {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  border-radius: 60px;
+  /* width: 100%;
+  height: auto;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.6);
+  display: block;
+width: 100%;
+height: auto; */
+}
+
+
+.imageCard:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.imageCard:hover video{
+    opacity: 1;
+}
+
+.cardText{
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.cardText h1{
+    font-family: "Orbitron";
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-bottom: 1em;
+}
+
+
+footer {
+    padding: 30px 20px;
+    background-color: #606C38;
+    /* background-image: url("../assets/moon.png"); */
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 30%;
+}
+
+footer .copyright {
+    grid-column: 2/3;
+    text-align: center;
+    font-size: 0.8em;
+    white-space: nowrap;
+    line-height: 1.2em;
+}
+
+footer .social {
+    margin-left: 10px;
+    grid-column: 6/8;
+    display: flex;
+    justify-items: flex-end;
+
+}
+
+footer .social img {
+    height: 20px;
+    margin: 10px 15px;
+
+}
+
+
+@media screen and (min-width: 620px) {
+    .welcome-img img {
+        width: 100%;
+    }
+
+    .about-img img {
+        width: 150%;
+    }
+
+    .associates {
+        padding: 30px 100px;
+    }
+
+    .associates .grid li{
+        grid-column: span 4;
+        align-items: center;
+    }
+
+    .associates h3 {
+        font-size: 1.9em;
+        padding-top: 1.4em;
+        
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .wrapper > * {
+        padding: 2em;
+    }
+
+    .company-info h2, .company-info ul{
+        text-align: left;
+    }
+
+
+    .skills div{
+        grid-column: span 4;
+        display: block;
+        margin: 20px 0;
+    }
+
+    .skills div:last-child{
+        grid-column: 4/7;
+    }
+
+    .skills div img{
+        max-width: 60%;
+        padding-left: 90px;
+    }
+
+    .skills .eye img{
+        padding-left: 35px;
+    }
+
+    .skills article h3 {
+        font-size: 1.2em;
+        padding-bottom: 1em;
+    }
+
+    .skills article p {
+        font-size: 1.1em;
+    }
+
+    .skills div article{
+        text-align: center;
+    }
+
+    .leading2{
+        display: block;
+    }
+
+    .exp-text h1 {
+        font-size: 2.1em;
+    }
+
+    .exp-text p {
+        font-size: 1.7em;
+    }
+
+    .imageCard:hover{
+        cursor: pointer;
+        transform: scale(1.35);
+    }
+
+    .cardText h1 {
+        font-size: 1.8em;
+    }
+
+    .cardText p {
+        font-size: 1.6em;
+    }
+
+
+    footer {
+        background-size:19%;
+        background-position: bottom;
+    }
+
+    footer .social {
+        grid-column: 8/9;
+    }
+}
+
+
+@media screen and (min-width: 960px){
+
+    .nav .nav-toggle{
+        display: none;
+    }
+
+    .nav .nav-menu {
+        flex-direction: row;
+    }
+
+    .nav-menu li {
+        display: block;
+        padding-top: 0.5em;
+    }
+
+    .nav-menu li:first-child {
+        padding-top: 0.5em;
+        padding-left: 2em;
+        font-size: 1.7em;
+    }
+
+    .nav-menu li:last-child {
+        padding-right: .2em;
+    }
+
+    .nav-menu li a {
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    body{
+        font-size: 18px;
+    }
+
+  
+
+    #welcome{
+        padding-bottom: 10px;
+    }
+
+    .welcome-text h1 {
+        padding-top: 3.5em;
+        font-size: 4em;
+    }
+
+    .associates{
+        padding: 30px 20px;
+    }
+
+    .associates ul{
+        margin: 40px 0;
+    }
+
+    .associates .grid li{
+        grid-column: span 2;
+        align-items: center;
+    }
+
+    .grid li * {
+        height: 140px;
+    }
+
+    .associates h3 {
+        font-size: 2.1em;
+        padding-top: 1.4em;
+        
+    }
+
+    .about-text{
+        align-self: center;
+        grid-column: 5/9;
+    }
+
+    .skills div:nth-child(1){
+        grid-column: 1/3;
+        padding-left: 2em;
+    }
+
+    .skills div img:nth-child(1){
+        padding-left: 45px;
+    }
+
+    .skills div:nth-child(2){
+        grid-column: 4/6;
+        padding-top: 140px;
+    }
+
+
+    .skills div:nth-child(3){
+        grid-column: 7/9;
+        padding-right: 2em;
+    }
+
+    .skills div img {
+        max-width: 80%;
+        margin: 10px 10%;
+    }
+
+    .skills article p {
+        font-size: 0.8em;
+    }
+
+    .fontchange .tes{
+        font-size: 0.95em;
+        font-weight: 400;
+    }
+
+    .btndesign{
+        font-size: 1.6em;
+    }
+
+
+    .exp-text{
+        align-self: center;
+        grid-column: 5/9;
+    }
+
+    .exp-text h1 {
+        font-size: 1.9em;
+    }
+
+    .exp-text p {
+        font-size: 1.6em;
+    }
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .imageCard{
+        max-width: 35%;
+    }
+
+    .imageCard:hover{
+        cursor: pointer;
+        transform: scale(1.4);
+    }
+
+    .cardText h1 {
+        font-size: 2rem;
+    }
+
+    .cardText p {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        background-size:13%;
+        background-position: bottom;
+    }
+
+    footer .copyright {
+        grid-column: 1/4;
+    }
+
+    footer .social {
+        grid-column: 8/9;
+    }
+
+    footer .social img {
+        height: 28px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .welcome-text{
+        padding-left: 3em;
+    }
+
+    .welcome-text p {
+        font-size: 1.6em;
+        padding-left: 10px;
+        width: 500px;
+    }
+
+    .welcome-text a {
+        font-size: 2em;
+        padding: 0.4em;
+    }
+
+    .button{
+        border-radius: 70px;
+    }
+
+    .associates h3 {
+        font-size: 2.2em;
+        
+    }
+
+    .associates h4 {
+        font-size: 1.9em;
+    }
+
+    .associates p {
+        font-size: 1em;
+    }
+
+    .about-text h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1.6em;
+        text-align: center;
+        padding-left: 2em;
+    }
+
+    #skilled h2{
+        font-size: 2em;
+    }
+
+    skills div:nth-child(1){
+        grid-column: 2/3;
+        padding-left: 2em;
+    }
+
+    .skills div img:nth-child(1){
+        padding-left: 115px;
+    }
+
+    .skills div:nth-child(2){
+        grid-column: 4/6;
+        padding-top: 0;
+    }
+
+    .skills div:nth-child(3){
+        grid-column: 7/9;
+        padding-right: 2em;
+    }
+
+    .skills div img {
+        max-width: 80%;
+        margin: 10px 10%;
+    }
+
+    .skills article p {
+        font-size: 1em;
+    }
+
+    .fontchange .tes{
+        font-size: 1.1em;
+    }
+
+    .exp-text h1 {
+        font-size: 3em;
+        text-align: left;
+        
+        padding-left: 90px;
+    }
+
+    .exp-text p {
+        font-size: 2.3em;
+        text-align: left;
+        padding-left: 2em;
+        line-height: 70px;
+    }
+
+    .imageCard{
+        max-width: 20%;
+    }
+
+
+    footer {
+        background-size:8%;
+        background-position: bottom;
+    }
+
+    footer .copyright {
+        grid-column: 1/3;
+    }
+
+    footer .social {
+        grid-column: 9/9;
+    }
+
+    footer .social img {
+        height: 35px;
+        margin-left: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fa-robot {
+      animation: none;
+    }
+
+    .quote h2{
+        animation:none;
+        width: 100%;
+    }
+  }
