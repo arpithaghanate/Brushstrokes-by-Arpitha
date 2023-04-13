@@ -206,6 +206,8 @@ label[for="nav-checkbox"] i{
 
 .night{
     background-image: url("../assets/painting_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #welcome{
